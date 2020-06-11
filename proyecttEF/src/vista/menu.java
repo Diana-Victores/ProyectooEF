@@ -5,6 +5,15 @@
  */
 package vista;
 
+import Mantenimiento.Aulas;
+import Mantenimiento.Carreras;
+import Mantenimiento.Cursos;
+import Mantenimiento.Facultades;
+import Mantenimiento.Jornadas;
+import Mantenimiento.MantenimientoAlumno;
+import Mantenimiento.MantenimientoMaestros;
+import Mantenimiento.Secciones;
+import Mantenimiento.Sedes;
 import modelo.Usuarios;
 
 /**
@@ -95,6 +104,11 @@ public class menu extends javax.swing.JFrame {
 
         jCheckBoxMenuItem3.setSelected(true);
         jCheckBoxMenuItem3.setText("Mantenimiento Maestro");
+        jCheckBoxMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem3ActionPerformed(evt);
+            }
+        });
         menuLogin.add(jCheckBoxMenuItem3);
 
         jMenuBar2.add(menuLogin);
@@ -103,30 +117,65 @@ public class menu extends javax.swing.JFrame {
 
         jCheckBoxMenuItem5.setSelected(true);
         jCheckBoxMenuItem5.setText("Mantenimiento Cursos");
+        jCheckBoxMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem5ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem5);
 
         jCheckBoxMenuItem6.setSelected(true);
         jCheckBoxMenuItem6.setText("Mantenimiento Carreras");
+        jCheckBoxMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem6ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem6);
 
         jCheckBoxMenuItem7.setSelected(true);
         jCheckBoxMenuItem7.setText("Mantenimiento Facultaades");
+        jCheckBoxMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem7ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem7);
 
         jCheckBoxMenuItem8.setSelected(true);
         jCheckBoxMenuItem8.setText("Mantenimiento Sedes");
+        jCheckBoxMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem8ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem8);
 
         jCheckBoxMenuItem9.setSelected(true);
         jCheckBoxMenuItem9.setText("Mantenimiento Aulas");
+        jCheckBoxMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem9ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem9);
 
         jCheckBoxMenuItem10.setSelected(true);
         jCheckBoxMenuItem10.setText("Mantenimiento Secciones");
+        jCheckBoxMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem10ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem10);
 
         jCheckBoxMenuItem11.setSelected(true);
         jCheckBoxMenuItem11.setText("Mantenimiento Jornadas");
+        jCheckBoxMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem11ActionPerformed(evt);
+            }
+        });
         menuCatalogo.add(jCheckBoxMenuItem11);
 
         jMenuBar2.add(menuCatalogo);
@@ -184,7 +233,7 @@ public class menu extends javax.swing.JFrame {
 
     private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
         // Inicio
-        Inicio frm = new Inicio();
+        MantenimientoAlumno frm = new MantenimientoAlumno();
         frm.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
@@ -192,6 +241,94 @@ public class menu extends javax.swing.JFrame {
     private void subMenuAddProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuAddProductoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_subMenuAddProductoActionPerformed
+
+    private void jCheckBoxMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem3ActionPerformed
+
+ MantenimientoMaestros frm = new MantenimientoMaestros();
+        frm.setVisible(true);
+        this.setVisible(false);
+
+
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem3ActionPerformed
+
+    private void jCheckBoxMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem5ActionPerformed
+        // cursos
+        
+        Cursos frm = new Cursos();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem5ActionPerformed
+
+    private void jCheckBoxMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        
+          Carreras frm = new Carreras();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem6ActionPerformed
+
+    private void jCheckBoxMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        Facultades frm = new Facultades();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem7ActionPerformed
+
+    private void jCheckBoxMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        
+        
+         Sedes frm = new Sedes();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem8ActionPerformed
+
+    private void jCheckBoxMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        
+         Aulas frm = new Aulas();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem9ActionPerformed
+
+    private void jCheckBoxMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        
+         Secciones frm = new Secciones();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem10ActionPerformed
+
+    private void jCheckBoxMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem11ActionPerformed
+        // TODO add your handling code here:
+        
+         Jornadas frm = new Jornadas();
+        frm.setVisible(true);
+        this.setVisible(false);
+        
+        
+        
+        
+    }//GEN-LAST:event_jCheckBoxMenuItem11ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
