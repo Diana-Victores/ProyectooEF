@@ -5,6 +5,8 @@
  */
 package vista;
 
+import Asignaciones.AsiganacionEstudiante;
+import Asignaciones.AsignacionMaestro;
 import Mantenimiento.Aulas;
 import Mantenimiento.Carreras;
 import Mantenimiento.Cursos;
@@ -36,9 +38,16 @@ public class menu extends javax.swing.JFrame {
         if (mod.getIdTipo() == 1) {
             menuMantenimientos.setVisible(true);
             menuAsignaciones.setVisible(true);
+            menuAbrir.setVisible(true);
+            menuCatalogo.setVisible(true);
+            menuMantenimientos.setVisible(true);
+            menuAsignaciones.setVisible (true);
+            menuHerramientas.setVisible(true);
+            menuSalir.setVisible(true);
         } else {
-            menuAsignaciones.setVisible(false);
-           menuMantenimientos.setVisible(false);
+            menuSalir.setVisible(false);
+            menuHerramientas.setVisible(false);
+           
         }
 
     }
@@ -51,7 +60,7 @@ public class menu extends javax.swing.JFrame {
         jCheckBoxMenuItem4 = new javax.swing.JCheckBoxMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar2 = new javax.swing.JMenuBar();
-        menuLogin = new javax.swing.JMenu();
+        menuAbrir = new javax.swing.JMenu();
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItem3 = new javax.swing.JCheckBoxMenuItem();
         menuCatalogo = new javax.swing.JMenu();
@@ -66,9 +75,8 @@ public class menu extends javax.swing.JFrame {
         subMenuAddProducto = new javax.swing.JMenuItem();
         subMenuEditProducto = new javax.swing.JMenuItem();
         menuAsignaciones = new javax.swing.JMenu();
-        subMenuAddProvedor = new javax.swing.JMenuItem();
+        menuHerramientas = new javax.swing.JMenu();
         menuSalir = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
         jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
 
         jMenuItem3.setText("jMenuItem3");
@@ -91,7 +99,7 @@ public class menu extends javax.swing.JFrame {
             .addGap(0, 341, Short.MAX_VALUE)
         );
 
-        menuLogin.setText("Abrir");
+        menuAbrir.setText("Abrir");
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("Mantenimiento Alumno");
@@ -100,7 +108,7 @@ public class menu extends javax.swing.JFrame {
                 jCheckBoxMenuItem1ActionPerformed(evt);
             }
         });
-        menuLogin.add(jCheckBoxMenuItem1);
+        menuAbrir.add(jCheckBoxMenuItem1);
 
         jCheckBoxMenuItem3.setSelected(true);
         jCheckBoxMenuItem3.setText("Mantenimiento Maestro");
@@ -109,9 +117,9 @@ public class menu extends javax.swing.JFrame {
                 jCheckBoxMenuItem3ActionPerformed(evt);
             }
         });
-        menuLogin.add(jCheckBoxMenuItem3);
+        menuAbrir.add(jCheckBoxMenuItem3);
 
-        jMenuBar2.add(menuLogin);
+        jMenuBar2.add(menuAbrir);
 
         menuCatalogo.setText("Catalogo");
 
@@ -191,27 +199,33 @@ public class menu extends javax.swing.JFrame {
         menuMantenimientos.add(subMenuAddProducto);
 
         subMenuEditProducto.setText("Asignacion Maestro");
+        subMenuEditProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuEditProductoActionPerformed(evt);
+            }
+        });
         menuMantenimientos.add(subMenuEditProducto);
 
         jMenuBar2.add(menuMantenimientos);
 
         menuAsignaciones.setText("Informes");
-
-        subMenuAddProvedor.setText("Agregar");
-        menuAsignaciones.add(subMenuAddProvedor);
-
         jMenuBar2.add(menuAsignaciones);
 
-        menuSalir.setText("Herramientas");
-        jMenuBar2.add(menuSalir);
+        menuHerramientas.setText("Herramientas");
+        jMenuBar2.add(menuHerramientas);
 
-        jMenu1.setText("Ayuda");
+        menuSalir.setText("Ayuda");
 
         jCheckBoxMenuItem2.setSelected(true);
         jCheckBoxMenuItem2.setText("Salir del Sistema");
-        jMenu1.add(jCheckBoxMenuItem2);
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
+        menuSalir.add(jCheckBoxMenuItem2);
 
-        jMenuBar2.add(jMenu1);
+        jMenuBar2.add(menuSalir);
 
         setJMenuBar(jMenuBar2);
 
@@ -240,6 +254,9 @@ public class menu extends javax.swing.JFrame {
 
     private void subMenuAddProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuAddProductoActionPerformed
         // TODO add your handling code here:
+        AsiganacionEstudiante frm = new AsiganacionEstudiante();
+        frm.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_subMenuAddProductoActionPerformed
 
     private void jCheckBoxMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem3ActionPerformed
@@ -330,6 +347,18 @@ public class menu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jCheckBoxMenuItem11ActionPerformed
 
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         System.exit(0);
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+
+    private void subMenuEditProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuEditProductoActionPerformed
+        // TODO add your handling code here:
+          AsignacionMaestro frm = new AsignacionMaestro();
+        frm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_subMenuEditProductoActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -375,17 +404,16 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem7;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem8;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem9;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenu menuAbrir;
     private javax.swing.JMenu menuAsignaciones;
     private javax.swing.JMenu menuCatalogo;
-    private javax.swing.JMenu menuLogin;
+    private javax.swing.JMenu menuHerramientas;
     private javax.swing.JMenu menuMantenimientos;
     private javax.swing.JMenu menuSalir;
     private javax.swing.JMenuItem subMenuAddProducto;
-    private javax.swing.JMenuItem subMenuAddProvedor;
     private javax.swing.JMenuItem subMenuEditProducto;
     // End of variables declaration//GEN-END:variables
 }

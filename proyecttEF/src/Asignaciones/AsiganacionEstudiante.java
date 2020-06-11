@@ -74,18 +74,22 @@ public class AsiganacionEstudiante extends javax.swing.JFrame {
         label_status.setForeground(new java.awt.Color(255, 255, 255));
         jPanel4.add(label_status, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, 84, 27));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Asignacion de cursos Alumnos");
         jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Carnet Alumno:");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, -1, -1));
         jPanel2.add(txtbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 12, 158, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 102));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton1.setText("Buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,38 +103,51 @@ public class AsiganacionEstudiante extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 102, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Codigo Carrera");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 24, -1, -1));
         jPanel3.add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 21, 179, -1));
 
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Codigo sede");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 62, -1, -1));
         jPanel3.add(txtsede, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 59, 179, -1));
 
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Codigo Jornada");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 100, -1, -1));
         jPanel3.add(txtjornada, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 97, 179, -1));
 
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Codigo Seccion");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 138, -1, -1));
         jPanel3.add(txtseccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 135, 179, -1));
 
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Codigo Aula");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 173, -1, -1));
         jPanel3.add(txtaula, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 173, 179, -1));
 
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Codigo curso");
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 207, -1, -1));
         jPanel3.add(txtcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 204, 179, -1));
 
+        jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton3.setText("Buscar");
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 242, -1, -1));
 
         jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 370, 280));
 
         jLabel12.setBackground(new java.awt.Color(255, 204, 204));
-        jLabel12.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(51, 0, 0));
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Informacion Estudiante:");
         jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, -1, -1));
 
@@ -140,19 +157,25 @@ public class AsiganacionEstudiante extends javax.swing.JFrame {
         jPanel1.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 59, 221, -1));
         jPanel1.add(txtestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 107, 221, -1));
 
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Nombre:");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Correo:");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 43, -1, -1));
 
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Estatus");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 87, -1, -1));
 
         jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 204, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton2.setText("Asignar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,8 +192,8 @@ public class AsiganacionEstudiante extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select * from alumnos where carnet_alumno = ?");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
+            PreparedStatement pst = cn.prepareStatement("select * from asignacioncursosalumnos where carnet_alumno = ?");
             pst.setString(1, txtbuscar.getText().trim());
             ResultSet rs = pst.executeQuery();
 
@@ -191,8 +214,8 @@ public class AsiganacionEstudiante extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/registrof1", "root", "");//conecta a MYSQL
-            PreparedStatement pst = cn.prepareStatement("insert into clientes2 values(?,?,?,?,?,?)");//Inserta los datos en la tabla clientes2
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "");//conecta a MYSQL
+            PreparedStatement pst = cn.prepareStatement("insert into asignacioncursosalumnos values(?,?,?,?,?,?)");//Inserta los datos en la tabla clientes2
 
             pst.setString(1, txtcodigo.getText().trim());
             pst.setString(2, txtsede.getText().trim());
