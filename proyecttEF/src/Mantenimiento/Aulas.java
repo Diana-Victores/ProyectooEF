@@ -110,9 +110,9 @@ public class Aulas extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 72, 163, -1));
-        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 110, 163, -1));
-        jPanel1.add(txtestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 148, 163, -1));
+        jPanel1.add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 163, -1));
+        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 163, -1));
+        jPanel1.add(txtestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 163, -1));
 
         label_status.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         label_status.setForeground(new java.awt.Color(255, 255, 255));

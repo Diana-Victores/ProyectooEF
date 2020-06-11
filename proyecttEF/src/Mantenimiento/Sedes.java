@@ -139,7 +139,7 @@ public class Sedes extends javax.swing.JFrame {
 
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("insert into sedes values(?,?,?)");
 
             pst.setString(1, txtcodigo.getText().trim());
@@ -164,13 +164,13 @@ public class Sedes extends javax.swing.JFrame {
         try {
             String ID = txtbuscar.getText().trim();
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("update sedes set codigo_sede = ?, nombre_sede = ?, estatus_sede= ? where codigo_sede=?");
 
             pst.setString(1, txtcodigo.getText().trim());
             pst.setString(2, txtnombre.getText().trim());
             pst.setString(3, txtestatus.getText().trim());
-            pst.setString(4, cod.trim());
+       //     pst.setString(4, cod.trim());
 
             pst.executeUpdate();
 
@@ -187,7 +187,7 @@ public class Sedes extends javax.swing.JFrame {
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("delete from sedes where codigo_sede = ?");
 
             pst.setString(1, txtbuscar.getText().trim());
@@ -205,7 +205,7 @@ public class Sedes extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
         try{
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("select * from sedes where codigo_sede = ?");
             pst.setString(1, txtbuscar.getText().trim());
             ResultSet rs = pst.executeQuery();

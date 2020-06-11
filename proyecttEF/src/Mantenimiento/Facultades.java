@@ -145,7 +145,7 @@ public class Facultades extends javax.swing.JFrame {
         // MANTENIMIENTO DE FACULTADES REALIZADO POR LUIS SOSA A LA 1:15 PM
         try{
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "");//conecta a MYSQL
-            PreparedStatement pst = cn.prepareStatement("insert into facultade1 values(?,?,?)");//Inserta los datos en la tabla
+            PreparedStatement pst = cn.prepareStatement("insert into facultade values(?,?,?)");//Inserta los datos en la tabla
 
             pst.setString(1, txtcodigo.getText().trim());//Codigo
             pst.setString(2, txtnombre.getText().trim());//Nombre
@@ -169,7 +169,7 @@ public class Facultades extends javax.swing.JFrame {
             String Codigo = Buscar.getText().trim();
 
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("update facultade1 set codigo_facultad= ?,nombre_facultad = ?,estatus_facultad = ?, codigo_facultad = "+ Codigo);
+            PreparedStatement pst = cn.prepareStatement("update facultade set codigo_facultad= ?,nombre_facultad = ?,estatus_facultad = ?, codigo_facultad = "+ Codigo);
 
             pst.setString(1, txtcodigo.getText().trim());
             pst.setString(2, txtnombre.getText().trim());
@@ -188,7 +188,7 @@ public class Facultades extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("delete from facultade1 where codigo_facultad = ?");
+            PreparedStatement pst = cn.prepareStatement("delete from facultade where codigo_facultad = ?");
 
             pst.setString(1, Buscar.getText().trim());
             pst.executeUpdate();
@@ -211,7 +211,7 @@ public class Facultades extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/siu", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select * from facultade1 where codigo_facultad = ?");
+            PreparedStatement pst = cn.prepareStatement("select * from facultade where codigo_facultad = ?");
             pst.setString(1, Buscar.getText().trim());
             ResultSet rs = pst.executeQuery();
 

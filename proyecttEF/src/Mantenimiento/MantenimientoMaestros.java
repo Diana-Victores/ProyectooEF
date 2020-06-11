@@ -5,6 +5,12 @@
  */
 package Mantenimiento;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Diana
@@ -46,6 +52,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
         txttelefono = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
         txtestatus = new javax.swing.JTextField();
+        label_status = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -137,7 +144,11 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
         jPanel1.add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 179, -1));
         jPanel1.add(txtestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 182, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 420, 330));
+        label_status.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        label_status.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(label_status, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 314, 100, 20));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 430, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -168,7 +179,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
             txtemail.setText("");
             txtestatus.setText("");
 
-            Label1.setText("El Maestro se registró");
+            label_status.setText("El Maestro se registró");
 
         } catch (Exception e) {
             System.out.print(e.getMessage());
@@ -190,7 +201,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
             pst.setString(4, txttelefono.getText().trim());
             pst.setString(5, txtemail.getText().trim());
             pst.setString(6, txtestatus.getText().trim());
-            pst.setString(7, cod.trim());
+          //  pst.setString(7, cod.trim());
 
             pst.executeUpdate();
 
@@ -200,7 +211,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
             txttelefono.setText("");
             txtemail.setText("");
             txtestatus.setText("");
-            Label1.setText("Registro Modificado.");
+            label_status.setText("Registro Modificado.");
 
         } catch (Exception e) {
             System.out.print(e.getMessage());
@@ -223,7 +234,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
             txttelefono.setText("");
             txtemail.setText("");
             txtestatus.setText("");
-            Label1.setText("Registro eliminado.");
+            label_status.setText("Registro eliminado.");
 
         } catch (Exception e) {
         }
@@ -246,7 +257,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
                 txttelefono.setText(rs.getString("telefono_maetro"));
                 txtemail.setText(rs.getString("email_maestro"));
                 txtestatus.setText(rs.getString("estatus_maestro"));
-                cod = txtbuscar.getText();
+           //     cod = txtbuscar.getText();
             } else {
                 JOptionPane.showMessageDialog(null, "Maestro no registrado.");
                 txtbuscar.setText("");
@@ -306,6 +317,7 @@ public class MantenimientoMaestros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel label_status;
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtcodigo;
     private javax.swing.JTextField txtdireccion;

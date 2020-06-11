@@ -175,7 +175,7 @@ public class MantenimientoAlumno extends javax.swing.JFrame {
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("insert into alumnos values(?,?,?,?,?,?)");
 
             pst.setString(1, txtcarnet.getText().trim());
@@ -207,7 +207,7 @@ public class MantenimientoAlumno extends javax.swing.JFrame {
         try {
             String ID = txtbuscar.getText().trim();
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("update alumnos set carnet_alumno = ?, nombre_alumno = ?, direccion_alumno = ?, telefono_alumno= ?, email_alumno= ?, estatus_alumno= ? where carnet_alumno=?");
 
             pst.setString(1, txtcarnet.getText().trim());
@@ -216,7 +216,7 @@ public class MantenimientoAlumno extends javax.swing.JFrame {
             pst.setString(4, txttelefono.getText().trim());
             pst.setString(5, txtemail.getText().trim());
             pst.setString(6, txtestatus.getText().trim());
-            pst.setString(7, cod.trim());
+          //  pst.setString(7, cod.trim());
 
             pst.executeUpdate();
 
@@ -237,7 +237,7 @@ public class MantenimientoAlumno extends javax.swing.JFrame {
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("delete from alumnos where carnet_alumno = ?");
 
             pst.setString(1, txtbuscar.getText().trim());
@@ -259,7 +259,7 @@ public class MantenimientoAlumno extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Proyecto", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/siu", "root", "");
             PreparedStatement pst = cn.prepareStatement("select * from alumnos where carnet_alumno = ?");
             pst.setString(1, txtbuscar.getText().trim());
 
@@ -272,7 +272,7 @@ public class MantenimientoAlumno extends javax.swing.JFrame {
                 txttelefono.setText(rs.getString("telefono_alumno"));
                 txtemail.setText(rs.getString("email_alumno"));
                 txtestatus.setText(rs.getString("estatus_alumno"));
-                cod = txtbuscar.getText();
+             //   cod = txtbuscar.getText();
             } else {
                 JOptionPane.showMessageDialog(null, "Cliente no registrado.");
                 txtbuscar.setText("");
